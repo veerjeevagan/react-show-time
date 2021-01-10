@@ -5,4 +5,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Here we are using react app to create a clock . Below gif shows the React App.
 
 ##React App
-<img src="https://giphy.com/gifs/RmdjYnbWMlfE4YBFHI" width="300">
+![](https://media.giphy.com/media/RmdjYnbWMlfE4YBFHI/giphy.gif)
