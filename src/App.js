@@ -1,6 +1,6 @@
 import './App.css';
 import moment from 'moment';
-import { useState , React , useEffect } from 'react';
+import { useState , React , useEffect ,useCallback } from 'react';
 // import random_length from './random_length.css';
 
 
@@ -10,6 +10,15 @@ function App() {
   const [random_number, setRandom_number] = useState(0);
   // const [randomLength , setRandomLength] = useState(1);
   
+  const doThings= useCallback(()=>{
+    setCircleBoolean((prev)=>{
+      return !prev});
+    setDate(moment().format('MMMM Do YYYY, h:mm:ss a')) ;
+    setRandom_number(Math.random() * 100);
+    // setRandomLength(Math.random()*3);
+    // console.log(randomLength);
+  } , []) 
+
   useEffect(() => {
     const interval = setInterval(() => {
       doThings()
@@ -17,14 +26,7 @@ function App() {
     return () => clearInterval(interval);
   }, [doThings]);
 
-  function doThings() {
-    setCircleBoolean((prev)=>{
-      return !prev});
-    setDate(moment().format('MMMM Do YYYY, h:mm:ss a')) ;
-    setRandom_number(Math.random() * 100);
-    // setRandomLength(Math.random()*3);
-    // console.log(randomLength);
-  }
+  
 
 
 
